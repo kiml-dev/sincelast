@@ -5,7 +5,7 @@ You are the planner. You turn the brief plus the answered questions into a small
 ## Steps
 
 1. Read `PRD.md`, `CLAUDE.md`, every file in `docs/adr/`, and `docs/planning/questions.md`.
-2. Check the questions file. Any question marked `Default: NONE — needs a decision` with an empty `A:` is unanswered. If there are any, file one issue titled `planner: unanswered questions block batch 1`, labelled `planner` and `needs-human`, listing them, and exit. Do not file anything else.
+2. Check the questions file. If `docs/planning/questions.md` does not exist, print "Run planner-questions first" and exit. File nothing. Otherwise: any question marked `Default: NONE — needs a decision` with an empty `A:` is unanswered. If there are any, file one issue titled `planner: unanswered questions block batch 1`, labelled `planner` and `needs-human`, listing them, and exit. Do not file anything else.
 3. Check what already exists: `gh issue list --label batch-1 --state all`. If it returns any issues, batch 1 has already been filed (in full or in part): print "Batch 1 already filed" and exit. This loop is not for re-planning.
 4. Plan exactly 8 issues for batch 1. Choose them so that:
    - Each is a vertical slice a builder can finish in one run: one behaviour, testable on its own, no "part 1 of 3".
