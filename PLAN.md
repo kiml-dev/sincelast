@@ -8,6 +8,8 @@ Goal: build the changelog tool (see PRD.md) end-to-end using a chain of small ag
 - Shared state lives in the repo and GitHub. Labels are the state machine: `ready`, `in-progress`, `blocked`, `needs-human`.
 - Every loop is idempotent and bounded (max iterations, max cost) with an escape hatch to a human.
 - Tests are the only oracle the fix loop has. Every issue ships with acceptance criteria and test stubs.
+- Oracles are deterministic: a check must give the same answer twice. Timing, network and anything "about" becomes a budget or a manual check, never an acceptance criterion.
+- Run order is state, not sequence. No loop assumes another has already run. Each one reads what it needs from the repo and GitHub, and exits cleanly if it isn't there.
 - The loop writes ADRs; the human only writes hard constraints (see docs/adr/).
 
 ## Loops
@@ -29,7 +31,7 @@ Build order: 1 → 2 → 3 → 4 → 5. Start with the janitor because it is sma
 - [x] M1 — Janitor loop files its first issue from a lint run.
 - [x] M2 — Builder loop turns one janitor issue into a merged PR.
 - [x] M3 — Reviewer loop leaves a useful review on a builder PR.
-- [ ] M4 — Planner loop turns PRD.md into a first batch of issues you'd actually accept.
+- [x] M4 — Planner loop turns PRD.md into a first batch of issues you'd actually accept.
 - [ ] M5 — Scaffold loop picks and installs a stack within ADR-001 constraints.
 - [ ] M6 — Full chain runs unattended on a schedule for one week; count `needs-human` escalations.
 
