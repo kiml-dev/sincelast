@@ -26,8 +26,8 @@ Build order: 1 → 2 → 3 → 4 → 5. Start with the janitor because it is sma
 
 - [x] M0 — Repo exists on GitHub with these files, `gh` authenticated, labels created.
   - `main` is protected: PR required, no force-push, no deletion, enforced for admins too.
-- [ ] M1 — Janitor loop files its first issue from a lint run.
-- [ ] M2 — Builder loop turns one janitor issue into a merged PR.
+- [x] M1 — Janitor loop files its first issue from a lint run.
+- [x] M2 — Builder loop turns one janitor issue into a merged PR.
 - [ ] M3 — Reviewer loop leaves a useful review on a builder PR.
 - [ ] M4 — Planner loop turns PRD.md into a first batch of issues you'd actually accept.
 - [ ] M5 — Scaffold loop picks and installs a stack within ADR-001 constraints.
