@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible",
+    "title": "Add dark mode",
+    "body": "You can now switch to **dark mode**.",
+    "tag": "feat",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": 12,
+    "prUrl": "https://github.com/example/example/pull/12"
+  },
+  {
+    "id": "hidden",
+    "title": "Hidden internal fix",
+    "body": "",
+    "tag": "fix",
+    "hidden": true,
+    "version": "1.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": null,
+    "prUrl": null
+  },
+  {
+    "id": "chore",
+    "title": "Chore dependency bump",
+    "body": "",
+    "tag": "chore",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": null,
+    "prUrl": null
+  },
+  {
+    "id": "unreleased",
+    "title": "Unreleased feature",
+    "body": "",
+    "tag": "feat",
+    "hidden": false,
+    "version": null,
+    "releasedAt": null,
+    "prNumber": null,
+    "prUrl": null
+  }
+]
