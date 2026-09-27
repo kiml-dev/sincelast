@@ -11,6 +11,6 @@ describe("inferBump", () => {
   });
 
   it("returns patch for fix", () => {
-    expect(inferBump(["fix"])).toBe("minor");
+    expect(inferBump(["fix"])).toBe("patch");
   });
 });
