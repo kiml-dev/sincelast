@@ -28,7 +28,7 @@ Build order: 1 → 2 → 3 → 4 → 5. Start with the janitor because it is sma
   - `main` is protected: PR required, no force-push, no deletion, enforced for admins too.
 - [x] M1 — Janitor loop files its first issue from a lint run.
 - [x] M2 — Builder loop turns one janitor issue into a merged PR.
-- [ ] M3 — Reviewer loop leaves a useful review on a builder PR.
+- [x] M3 — Reviewer loop leaves a useful review on a builder PR.
 - [ ] M4 — Planner loop turns PRD.md into a first batch of issues you'd actually accept.
 - [ ] M5 — Scaffold loop picks and installs a stack within ADR-001 constraints.
 - [ ] M6 — Full chain runs unattended on a schedule for one week; count `needs-human` escalations.

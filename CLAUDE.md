@@ -22,7 +22,7 @@ This repo (`kiml-dev/sincelast`) is a loop-engineering experiment. The product i
 ## Conventions
 
 - Branch names: `<issue-number>-<short-slug>`.
-- PR titles carry a conventional-commit prefix (`feat:`, `fix:`, `chore:`, `docs:`) and a `!` for breaking changes. The changelog tool itself will read these.
+- PR titles carry a conventional-commit prefix (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`) and a `!` for breaking changes. The changelog tool itself will read these.
 - Issues carry exactly one of `feat`, `fix`, `chore` plus a priority (`p1`, `p2`, `p3`).
 
 ## Labels to create on the repo
