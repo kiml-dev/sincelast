@@ -12,10 +12,11 @@ Tiny teams (1–5 people) ship constantly but rarely tell users what changed. Wr
 ## What it does
 
 1. Connects to a GitHub repo. Merged PRs become **draft entries** in an "Unreleased" bucket.
-2. An editor lets the team rewrite drafts in plain language, tag them (`feature`, `fix`, `breaking`), and hide the noise.
-3. It proposes the next semver bump from PR labels (`breaking` → major, `feat` → minor, `fix`/`chore` → patch, highest wins). The human can override.
+2. An editor lets the team rewrite drafts in plain language, tag them (`feat`, `fix`, `breaking`), and hide the noise.
+3. It proposes the next semver bump from conventional-commit PR titles (a `!` breaking marker → major, `feat:` → minor, `fix:`, `chore:` and other prefixes → patch, highest wins). PR labels are not used for this. The human can override.
 4. "Release" tags the repo, creates a GitHub release with the notes, and publishes them to a **public page** and an **embeddable widget**.
 5. Public page has an RSS feed.
+6. The embeddable widget is written in TypeScript and compiled to plain JavaScript, so sites embedding it need no build step.
 
 ## Done looks like
 
@@ -33,5 +34,5 @@ Tiny teams (1–5 people) ship constantly but rarely tell users what changed. Wr
 
 ## Open questions (for the planner loop to ask)
 
-- Hosted (needs a backend + DB) or static (GitHub Action writes JSON, page reads it)?
+- ~~Hosted (needs a backend + DB) or static (GitHub Action writes JSON, page reads it)?~~ Resolved: static, no server at runtime in v1 (ADR-001).
 - Widget: iframe or web component?
