@@ -9,13 +9,9 @@ These are decisions the human has already made. The scaffold loop must work with
 
 ## Decisions
 
-<!-- Fill these in. Delete any you don't want to constrain. Keep it short — every constraint you add is one fewer thing the loop gets to choose, and watching it choose is part of the experiment. -->
-
 - Language: TypeScript.
-- Frontend: TODO (e.g. "React", "any", "not Next.js")
-- Hosting target: TODO (e.g. "Cloudflare Pages", "Vercel", "static only")
-- Database: TODO (e.g. "SQLite", "none — static build", "no ORM")
-- Package manager: TODO
+- Database: none in v1. Data lives in files in the repo.
+- Package manager: npm.
 - Testing: must have unit tests and at least one end-to-end runner; the loop picks which.
 - No paid services in v1.
 
