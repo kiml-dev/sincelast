@@ -7,10 +7,12 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "a11y": "pa11y ./public/index.html"
+    "a11y": "pa11y ./public/index.html",
+    "perf": "node src/perf-cli.ts public/index.html"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.0",
     "@types/sanitize-html": "^2.16.1",
     "eslint": "^10.11.0",
     "marked": "^18.0.14",
