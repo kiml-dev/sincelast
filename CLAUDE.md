@@ -8,6 +8,7 @@ This repo (`kiml-dev/sincelast`) is a loop-engineering experiment. The product i
 - `PLAN.md` — the loops, their order, and the milestones.
 - `docs/adr/` — architecture decisions. `001` is human-set and not up for debate. Later ADRs were written by the scaffold loop; read them before touching structure, and add a new one if you change a decision.
 - `loops/` — one prompt file per loop. If you are running as a loop, your prompt is there and it is your only instruction beyond this file.
+- `loops/run/` — one script per loop that runs it with its allowlist (`./loops/run/builder.sh`). Allowlists live here, not in anyone's shell history.
 
 ## Rules for every loop
 
@@ -31,7 +32,7 @@ This is the one list of checks. Loop prompts refer to it and never list checks t
 
 Every check is read-only and deterministic: it never writes files, and it gives the same answer twice.
 
-To add a check: add the npm script, add it to this list, and add `Bash(npm run <name>)` to the allowlist of every loop that runs checks (janitor, builder, reviewer).
+To add a check: add the npm script and add it to this list. The run scripts in `loops/run/` read this list to build each loop's allowlist, so nothing else needs to change. Keep the format: a numbered line with the command in backticks.
 
 ## Conventions
 
