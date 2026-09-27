@@ -1,0 +1,13 @@
+[
+  {
+    "id": "unreleased",
+    "title": "Unreleased feature",
+    "body": "",
+    "tag": "feat",
+    "hidden": false,
+    "version": null,
+    "releasedAt": null,
+    "prNumber": null,
+    "prUrl": null
+  }
+]

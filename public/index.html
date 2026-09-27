@@ -1,15 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>sincelast — what's new</title>
-  </head>
-  <body>
-    <main>
-      <h1>What's new</h1>
-      <img src="logo.svg" alt="sincelast logo" />
-      <p>No releases yet.</p>
-    </main>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>sincelast — what's new</title>
+<style>body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; color: #24292f; background: #fff; }
+main { max-width: 42rem; margin: 0 auto; padding: 1rem; }
+section { border-top: 1px solid #d0d7de; margin-top: 2rem; }
+ul { list-style: none; padding: 0; }
+li { margin: 1.5rem 0; }
+h3 { margin: 0.25rem 0; }
+.tag { display: inline-block; font-size: 0.875rem; font-weight: 600; padding: 0 0.5rem; border: 1px solid currentColor; border-radius: 1rem; }
+a { color: #0550ae; }</style>
+</head>
+<body>
+<main>
+<h1>What's new</h1>
+<svg role="img" aria-label="sincelast logo" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#24292f" stroke-width="6" />
+  <path d="M32 14 V32 H46" fill="none" stroke="#24292f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+<section>
+<h2>2.0.0</h2>
+<p><time datetime="2026-09-01">2026-09-01</time></p>
+<ul><li><span class="tag">Breaking</span><h3>Sample: Entries file moves to data/entries.json</h3><p>The entries file has a new home. To upgrade:</p>
+<ul>
+<li>Move <code>changelog.json</code> to <code>data/entries.json</code>.</li>
+<li>Rename each entry's <code>type</code> field to <code>tag</code>.</li>
+<li>Read the <a href="https://example.com/docs/migrate-2-0" rel="noopener noreferrer">migration guide</a> for the full list.</li>
+</ul><p><a href="https://github.com/example/example/pull/130">#130</a></p></li><li><span class="tag">Feature</span><h3>Sample: Hide entries from the public page</h3><p>Mark an entry as hidden to keep it out of the public page while still keeping it in your history.</p><p><a href="https://github.com/example/example/pull/133">#133</a></p></li></ul>
+</section>
+<section>
+<h2>1.1.0</h2>
+<p><time datetime="2026-07-14">2026-07-14</time></p>
+<ul><li><span class="tag">Feature</span><h3>Sample: Group entries by type</h3><p>Each release now lists breaking changes first, then new features, then fixes, so the important parts are at the top.</p><p><a href="https://github.com/example/example/pull/112">#112</a></p></li><li><span class="tag">Fix</span><h3>Sample: Long titles wrap on small screens</h3><p>Entry titles no longer run off the edge of the page on phones.</p></li></ul>
+</section>
+<section>
+<h2>1.0.0</h2>
+<p><time datetime="2026-06-02">2026-06-02</time></p>
+<ul><li><span class="tag">Feature</span><h3>Sample: Publish your first changelog page</h3><p>Your merged pull requests now turn into a public <strong>What's new</strong> page that anyone can read without signing in.</p><p><a href="https://github.com/example/example/pull/101">#101</a></p></li><li><span class="tag">Fix</span><h3>Sample: Dates no longer shift by a day</h3><p>Release dates were shown one day early for readers west of UTC. They now always match the date the release went out.</p><p><a href="https://github.com/example/example/pull/104">#104</a></p></li></ul>
+</section>
+</main>
+</body>
 </html>
