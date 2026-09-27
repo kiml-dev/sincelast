@@ -27,4 +27,4 @@ This repo (`kiml-dev/sincelast`) is a loop-engineering experiment. The product i
 
 ## Labels to create on the repo
 
-`ready`, `in-progress`, `blocked`, `needs-human`, `feat`, `fix`, `chore`, `breaking`, `p1`, `p2`, `p3`, `janitor`, `planner`
+`ready`, `in-progress`, `blocked`, `needs-human`, `feat`, `fix`, `chore`, `breaking`, `p1`, `p2`, `p3`, `janitor`, `planner`, `review:approved`, `review:changes`
