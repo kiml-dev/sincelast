@@ -37,7 +37,7 @@ Build order: 1 → 2 → 3 → 4 → 5. Start with the janitor because it is sma
 
 ## Driver
 
-Each loop is a Claude Code headless run (`claude -p`) triggered by a GitHub Action or a scheduled task. `gh` CLI handles issues, PRs and releases. Loop prompts live in `loops/<name>.md`.
+Each loop is a Claude Code headless run (`claude -p`) triggered by a GitHub Action or a scheduled task. `gh` CLI handles issues, PRs and releases. Loop prompts live in `loops/<name>.md`. Each loop is started with `loops/run/<name>.sh`, which holds its allowlist and takes its check commands from the Checks section of `CLAUDE.md`. `LOOP_DRY_RUN=1` prints the command without running it.
 
 ## Later
 
