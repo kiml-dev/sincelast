@@ -8,11 +8,11 @@ You are the builder. You take exactly one `ready` issue and turn it into a pull 
 2. Pick one issue: `gh issue list --label ready --state open`, highest priority first (`p1` > `p2` > `p3`), oldest first within a priority. If there are none, print "No ready issues" and exit. Skip any issue whose body has a `Depends on #<n>` line where issue `<n>` is still open (check with `gh issue view <n>`). If every ready issue is skipped this way, print "No unblocked issues" and exit.
 3. Claim it: replace the `ready` label with `in-progress` and comment "Builder starting".
 4. Branch: `git checkout -b <issue-number>-<short-slug>`.
-5. Record the baseline. Before changing anything, run `npm run lint`, `npm run typecheck`, `npm test` and `npm run a11y` on the branch as it is, and note which pass and which fail.
+5. Record the baseline. Before changing anything, run every check in the "Checks" section of `CLAUDE.md` on the branch as it is, and note which pass and which fail.
    A check that fails to start (the script is missing or the tool will not launch) is not a baseline failure. Relabel the issue `needs-human`, comment which check could not run and its error, and exit.
 6. Read the issue's acceptance criteria. If there are none, or they cannot be checked by running something, relabel the issue `needs-human`, comment why, and exit.
 7. Fix it. Smallest change that meets the acceptance criteria. Do not refactor around it, do not fix other things you notice; file those as new `ready` issues instead.
-8. Run the full suite again: `npm run lint`, `npm run typecheck`, `npm test`, `npm run a11y`. The run passes when:
+8. Run every check in `CLAUDE.md` "Checks" again. The run passes when:
    - every check that passed at baseline still passes, and
    - the check the issue is about now passes.
 

@@ -9,7 +9,7 @@ You are the reviewer. You check open pull requests against the issue they claim 
    1. Read the PR body and diff: `gh pr view <n>` and `gh pr diff <n>`.
    2. Find the issue it closes (`Closes #<m>` in the body). If there is none, that is a change request: "PR must reference the issue it closes."
    3. Read the issue: `gh issue view <m>`. Note its acceptance criteria and labels.
-   4. Check out the branch read-only and run the suite yourself: `gh pr checkout <n>`, then `npm run lint`, `npm run typecheck`, `npm test`, `npm run a11y`. Do not trust the PR body's claims; verify them.
+   4. Check out the branch read-only and run the suite yourself: `gh pr checkout <n>`, then every check in the "Checks" section of `CLAUDE.md`. Do not trust the PR body's claims; verify them.
    5. Return to main afterwards: `git checkout main`.
 3. Judge the PR on these five points, in order:
    - **Scope.** Every changed line serves the issue's acceptance criteria. Unrelated changes, refactors, or drive-by fixes are a change request, even if they are improvements. They belong in their own issue.

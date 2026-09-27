@@ -15,9 +15,23 @@ This repo (`kiml-dev/sincelast`) is a loop-engineering experiment. The product i
 - Labels are the state machine: `ready` → `in-progress` → PR open → merged. Use `blocked` after a bounded number of failed attempts and `needs-human` for anything you should not decide alone.
 - Never force-push, never merge, never delete branches. Humans merge.
 - Tests are the oracle. If there are no tests for what you changed, write them before you call it done.
-- Run the full check suite (`lint`, `typecheck`, `test`) before opening a PR. Say in the PR body what you ran and what the result was.
+- Run the full check suite (see Checks below) before opening a PR. Say in the PR body what you ran and what the result was.
 - If you hit the same error three times, stop, label `blocked`, and describe what you tried.
 - Commit small. One issue per branch, one branch per PR.
+
+## Checks
+
+This is the one list of checks. Loop prompts refer to it and never list checks themselves. Run them in this order:
+
+1. `npm run lint`
+2. `npm run typecheck`
+3. `npm test`
+4. `npm run a11y`
+5. `npm run perf`
+
+Every check is read-only and deterministic: it never writes files, and it gives the same answer twice.
+
+To add a check: add the npm script, add it to this list, and add `Bash(npm run <name>)` to the allowlist of every loop that runs checks (janitor, builder, reviewer).
 
 ## Conventions
 
