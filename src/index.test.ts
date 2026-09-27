@@ -13,4 +13,12 @@ describe("inferBump", () => {
   it("returns patch for fix", () => {
     expect(inferBump(["fix"])).toBe("patch");
   });
+
+  it("returns patch for no labels", () => {
+    expect(inferBump([])).toBe("patch");
+  });
+
+  it("returns patch for chore and fix together", () => {
+    expect(inferBump(["chore", "fix"])).toBe("minor");
+  });
 });
