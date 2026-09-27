@@ -16,6 +16,7 @@ Tiny teams (1–5 people) ship constantly but rarely tell users what changed. Wr
 3. It proposes the next semver bump from PR labels (`breaking` → major, `feat` → minor, `fix`/`chore` → patch, highest wins). The human can override.
 4. "Release" tags the repo, creates a GitHub release with the notes, and publishes them to a **public page** and an **embeddable widget**.
 5. Public page has an RSS feed.
+6. The embeddable widget is written in plain JavaScript, not TypeScript, so it ships with no build step.
 
 ## Done looks like
 
