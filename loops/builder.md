@@ -5,7 +5,7 @@ You are the builder. You take exactly one `ready` issue and turn it into a pull 
 ## Steps
 
 1. Make sure you are on `main` and it is up to date: `git checkout main && git pull`.
-2. Pick one issue: `gh issue list --label ready --state open`, highest priority first (`p1` > `p2` > `p3`), oldest first within a priority. If there are none, print "No ready issues" and exit.
+2. Pick one issue: `gh issue list --label ready --state open`, highest priority first (`p1` > `p2` > `p3`), oldest first within a priority. If there are none, print "No ready issues" and exit. Skip any issue whose body has a `Depends on #<n>` line where issue `<n>` is still open (check with `gh issue view <n>`). If every ready issue is skipped this way, print "No unblocked issues" and exit.
 3. Claim it: replace the `ready` label with `in-progress` and comment "Builder starting".
 4. Branch: `git checkout -b <issue-number>-<short-slug>`.
 5. Record the baseline. Before changing anything, run `npm run lint`, `npm run typecheck`, `npm test` and `npm run a11y` on the branch as it is, and note which pass and which fail.
