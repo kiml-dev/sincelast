@@ -25,7 +25,7 @@ Build order: 1 → 2 → 3 → 4 → 5. Start with the janitor because it is sma
 ## Milestones
 
 - [x] M0 — Repo exists on GitHub with these files, `gh` authenticated, labels created.
-  - Open gap: no branch protection on `main` (needs GitHub Pro or a public repo). Until then, "never merge / never force-push" is enforced only by CLAUDE.md.
+  - `main` is protected: PR required, no force-push, no deletion, enforced for admins too.
 - [ ] M1 — Janitor loop files its first issue from a lint run.
 - [ ] M2 — Builder loop turns one janitor issue into a merged PR.
 - [ ] M3 — Reviewer loop leaves a useful review on a builder PR.
