@@ -1,7 +1,7 @@
 import { buildPage } from "./build.ts";
 
-const input = "data/entries.json";
-const output = "public/index.html";
+const input = process.argv[2] ?? "data/entries.json";
+const output = process.argv[3] ?? "public/index.html";
 
 try {
   await buildPage({ input, output });
