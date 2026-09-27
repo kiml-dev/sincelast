@@ -9,6 +9,7 @@ You are the builder. You take exactly one `ready` issue and turn it into a pull 
 3. Claim it: replace the `ready` label with `in-progress` and comment "Builder starting".
 4. Branch: `git checkout -b <issue-number>-<short-slug>`.
 5. Record the baseline. Before changing anything, run `npm run lint`, `npm run typecheck`, `npm test` and `npm run a11y` on the branch as it is, and note which pass and which fail.
+   A check that fails to start (the script is missing or the tool will not launch) is not a baseline failure. Relabel the issue `needs-human`, comment which check could not run and its error, and exit.
 6. Read the issue's acceptance criteria. If there are none, or they cannot be checked by running something, relabel the issue `needs-human`, comment why, and exit.
 7. Fix it. Smallest change that meets the acceptance criteria. Do not refactor around it, do not fix other things you notice; file those as new `ready` issues instead.
 8. Run the full suite again: `npm run lint`, `npm run typecheck`, `npm test`, `npm run a11y`. The run passes when:
