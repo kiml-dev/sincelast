@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sample-001",
+    "title": "Sample: Publish your first changelog page",
+    "body": "Your merged pull requests now turn into a public **What's new** page that anyone can read without signing in.",
+    "tag": "feat",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-06-02",
+    "prNumber": 101,
+    "prUrl": "https://github.com/example/example/pull/101"
+  },
+  {
+    "id": "sample-002",
+    "title": "Sample: Dates no longer shift by a day",
+    "body": "Release dates were shown one day early for readers west of UTC. They now always match the date the release went out.",
+    "tag": "fix",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-06-02",
+    "prNumber": 104,
+    "prUrl": "https://github.com/example/example/pull/104"
+  },
+  {
+    "id": "sample-003",
+    "title": "Sample: Update build dependencies",
+    "body": "Routine dependency updates. Nothing changes for readers.",
+    "tag": "chore",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-06-02",
+    "prNumber": 106,
+    "prUrl": "https://github.com/example/example/pull/106"
+  },
+  {
+    "id": "sample-004",
+    "title": "Sample: Group entries by type",
+    "body": "Each release now lists breaking changes first, then new features, then fixes, so the important parts are at the top.",
+    "tag": "feat",
+    "hidden": false,
+    "version": "1.1.0",
+    "releasedAt": "2026-07-14",
+    "prNumber": 112,
+    "prUrl": "https://github.com/example/example/pull/112"
+  },
+  {
+    "id": "sample-005",
+    "title": "Sample: Long titles wrap on small screens",
+    "body": "Entry titles no longer run off the edge of the page on phones.",
+    "tag": "fix",
+    "hidden": false,
+    "version": "1.1.0",
+    "releasedAt": "2026-07-14",
+    "prNumber": null,
+    "prUrl": null
+  },
+  {
+    "id": "sample-006",
+    "title": "Sample: Fix typo in internal error message",
+    "body": "Corrects a typo that only showed up in server logs.",
+    "tag": "fix",
+    "hidden": true,
+    "version": "1.1.0",
+    "releasedAt": "2026-07-14",
+    "prNumber": 115,
+    "prUrl": "https://github.com/example/example/pull/115"
+  },
+  {
+    "id": "sample-007",
+    "title": "Sample: Entries file moves to data/entries.json",
+    "body": "The entries file has a new home. To upgrade:\n\n- Move `changelog.json` to `data/entries.json`.\n- Rename each entry's `type` field to `tag`.\n- Read the [migration guide](https://example.com/docs/migrate-2-0) for the full list.",
+    "tag": "breaking",
+    "hidden": false,
+    "version": "2.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": 130,
+    "prUrl": "https://github.com/example/example/pull/130"
+  },
+  {
+    "id": "sample-008",
+    "title": "Sample: Hide entries from the public page",
+    "body": "Mark an entry as hidden to keep it out of the public page while still keeping it in your history.",
+    "tag": "feat",
+    "hidden": false,
+    "version": "2.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": 133,
+    "prUrl": "https://github.com/example/example/pull/133"
+  },
+  {
+    "id": "sample-009",
+    "title": "Sample: Subscribe with RSS",
+    "body": "Follow new releases in your feed reader.",
+    "tag": "feat",
+    "hidden": false,
+    "version": null,
+    "releasedAt": null,
+    "prNumber": 141,
+    "prUrl": "https://github.com/example/example/pull/141"
+  },
+  {
+    "id": "sample-010",
+    "title": "Sample: Keyboard focus is visible on links",
+    "body": "Links now show a clear outline when you move to them with the keyboard.",
+    "tag": "fix",
+    "hidden": false,
+    "version": null,
+    "releasedAt": null,
+    "prNumber": 143,
+    "prUrl": "https://github.com/example/example/pull/143"
+  }
+]
