@@ -18,7 +18,7 @@ You are the builder. You take exactly one `ready` issue and turn it into a pull 
 
    If either condition fails, fix and rerun. **Three failed attempts at the same check and you stop**: relabel the issue `blocked`, comment with what you tried and the last error, and exit without opening a PR. Checks that failed at baseline, other than the one the issue is about, do not count towards the three attempts. Leave them alone.
 9. Commit with a conventional-commit message (`fix:`, `chore:`, `feat:`) that references the issue: `fix: add alt text to logo (#4)`.
-10. Push the branch and open a PR with `gh pr create`. The PR body must contain:
+10. Push the branch with `git push -u origin <branch>`. Write the PR body to `.loop/pr-body.md` (a gitignored scratch directory, so the file is never committed) and open the PR with `gh pr create --title "<title>" --body-file .loop/pr-body.md`. The PR body must contain:
    - `Closes #<n>`
    - Which checks you ran and their results, at baseline and after the fix.
    - A "Pre-existing failures" section listing each check that failed at baseline and still fails, with its error. Write "None" if there are none.
@@ -29,4 +29,5 @@ You are the builder. You take exactly one `ready` issue and turn it into a pull 
 
 - One issue per run.
 - Never push to `main`. Never use `gh pr merge`. Never force-push.
+- Temporary files go in `.loop/` only. Run one command per call: no `&&`, `;` or pipes.
 - If `docs/seeded-defects.md` exists, do not edit it.
