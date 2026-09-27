@@ -1,0 +1,24 @@
+[
+  {
+    "id": "a",
+    "title": "Add dark mode",
+    "body": "You can now switch to **dark mode**.",
+    "tag": "feat",
+    "hidden": false,
+    "version": "1.0.0",
+    "releasedAt": "2026-09-01",
+    "prNumber": 12,
+    "prUrl": "https://github.com/example/example/pull/12"
+  },
+  {
+    "id": "b",
+    "title": "Fix broken link",
+    "body": "",
+    "tag": "fix",
+    "hidden": false,
+    "version": null,
+    "releasedAt": null,
+    "prNumber": null,
+    "prUrl": null
+  }
+]
