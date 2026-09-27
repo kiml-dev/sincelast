@@ -80,6 +80,14 @@ describe("renderPage", () => {
     expect(html).toContain("<strong>x</strong>");
   });
 
+  it("keeps bullets on lists inside entry bodies", () => {
+    const html = renderPage([], { logoSvg: LOGO });
+    const style = html.match(/<style>([\s\S]*?)<\/style>/)?.[1] ?? "";
+    // Only the page's own entry list is unstyled; a bare `ul` rule would also hit Markdown lists.
+    expect(style).toMatch(/section > ul \{[^}]*list-style: none/);
+    expect(style).not.toMatch(/(^|\n)\s*ul\s*\{/);
+  });
+
   it("renders titles as h3 inside a list", () => {
     const html = render([release()]);
     expect(html).toMatch(/<ul><li>.*<h3>Add dark mode<\/h3>.*<\/li><\/ul>/s);
