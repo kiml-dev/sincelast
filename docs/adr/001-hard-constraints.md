@@ -9,9 +9,12 @@ These are decisions the human has already made. The scaffold loop must work with
 
 ## Decisions
 
-- Language: TypeScript.
+- Language: TypeScript, including the widget, which is compiled to plain JavaScript for sites that embed it.
+- Hosting: static. No server at runtime in v1.
 - Database: none in v1. Data lives in files in the repo.
 - Package manager: npm.
+- Version inference: from conventional-commit PR titles, not PR labels.
+- Dependencies: no UI framework until the scaffold loop chooses one in its own ADR. Build and test tooling may be added as dev dependencies.
 - Testing: must have unit tests and at least one end-to-end runner; the loop picks which.
 - No paid services in v1.
 
